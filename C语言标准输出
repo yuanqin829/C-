@@ -1,0 +1,50 @@
+#pragma warning(disable:4996)
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>//inupt  output std 标椎
+#include <stdlib.h>
+int main()
+{
+	//lomg long ago;//long long 在32位环境占用8个字节
+	//long long int z;
+	//system("color, 9A");
+	int x;//定义一个int类型变量
+	x = 233;//给变量赋值
+	unsigned y;  // unsigned int 无符号整型 只存整数
+
+	printf("hello world!你好啊%d",x);
+	
+	printf("八进制:%o \n", x);  
+	printf("十六进制：%X\n", x);
+	printf("小数测试  %lf  \n", 3.141592654);
+	printf("小数测试  %.9lf  \n", 3.141592654);
+
+	printf("科学计数法%E  \n", 30000000000000000.23); 
+	//浮点型存的是近似值   只能精确到多少位
+	//3.000140E+03
+	//3.000140*10^+003
+	printf("测试 %d  \n", 3.14);  //格式占符 打印变量/数据类型和格式占位符匹配
+
+	printf("科学计数法1  %g   \n", 3.23);
+	printf("科学计算法2  %g   \n", 3000000000000000000000.23);
+
+	printf("16进制测试 %x  \n", 223);
+	printf("16进制测试 %#x  \n", 223);
+
+	printf("8进制测试 %o  \n", 223);
+	printf("8进制测试 %#o  \n", 223);
+
+	//测试
+	for (int i = 0; i < 9; ++i)
+	{
+		for (int j = 0; j < 9; ++j)
+		{
+			printf("%02d*%+d=%2d ",i, j, i*j);
+		}
+		printf("\n");
+	}
+	getchar();
+	return 0;
+}
+
+// 科学计数法 用一个数字和10^N表示 一般用于表示比较大数字或者比较小的数字
+
