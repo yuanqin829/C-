@@ -1,0 +1,124 @@
+/*
+  1.输入的作用
+* >得到用户输入的内容 scanf
+* 用户输入内容 密码 账号
+* 根基用户输入的内容可以用于记录
+* 2.输入的格式
+* 
+* 3.格式占位符
+* >%d 整型
+* %c  %f   %lf  %s
+* %o  %x   %u   %e 
+* 
+* 4.格式占位符的控制
+* >1.精度控制
+* >%5d  最多能获取五位
+* >2.  *d *跳过 舍弃
+* >3.长度   %lf 对应 double
+*  l long 长   %ld
+*  %lld  long  long
+*  %hd   short int 
+* 
+*  %ld   long
+*  %lf   double
+* 
+* 5.注意事项
+* 1.安全检查周期，使用新版函数
+* >1.scanf-------scanf_s
+* >2.不同格式占位符对应不同的类型
+*  如果类型，和格式占位符不匹配会错误
+* 
+* >3.精度控 %。2lf
+*  scanf里面没有精度控制
+* 4.闪退
+*  输入的时候有一个回车会影响到后面的getchar（）
+*  所以多加一个getchar（）;就好
+*   所有输入的话 在后面多加个getchar（）
+* 
+* 5.输入
+* >输入之前用printf给用户提示 输入什么内容
+* 
+* 6.scanf  scanf_s的区别
+* >scanf是旧版函数
+* 安全检查
+* scanf_s  _s  safer
+* >用法基本相似
+* >字符输入的时候有区别
+* ,....c
+* cahr ch 
+* scanf（“c”,&ch）//scanf
+* scanf_s（“c”，&ch.1）
+*1表示char 只有一个字节cahr才需要加
+* 
+* 
+* ....c
+* char arr [20]//字符数组
+* scanf("%s",arr);//不需要取地址
+* scanf_s("%s"，arr，20);//加上数组大小
+* 
+* scanf   scanf_s
+* gets    gets_s//字符串有空格
+* getch   _getch
+* 
+* C4996 提示新版函数
+* 
+* 7.输入的隔开的符号 
+* >输入两个数字 两个数字 空格隔开
+* >%d %d--->必须用空格隔开
+* >%d %d 可以用空格  回车  Tab隔开
+* %i---->  int
+* 输入数字的时候  一直取到第一个非法字符为止
+* %d不会读到小数点
+* 字符类型
+* 。。。。。
+* 。。。。C
+* #include<stdiao.h>
+* printf scanf  getchar
+* #include <stdlib.h>
+* system
+*
+* 
+* 
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <windows.h>
+int main(void)
+{
+	int x;//定义变量
+	printf("请你输入整数\n");
+	scanf("%d", &x);//取地址符
+	printf("x的值是%d", x);
+	代码1
+	double y;
+	scanf("请输入一个小数%lf", &y);
+	printf("y=%lf\n", y);
+	代码2
+	float z;
+	printf("请输入一个小数\n");
+	scanf("%f", &z);//scanf的双引号后面放的\n输入会遇到一些小问题
+	printf("z的值是%f\n", z);
+
+	/*int a, b;
+	scanf("%d%d", &a, &b);
+	printf("a=%d,b=%d\n", a, b);*/
+
+	/*int x;
+	char ch;
+	printf("请输入一个整型 一个字符型");
+	scanf("%d", &x);
+	getchar();
+	scanf("%c", &ch);
+	printf("x=%d,ch=%d", x, ch);
+	*/
+	Sleep  函数查询
+    printf  打印查询
+
+
+	输入的时候敲一个回车 回车会影响后面的getchar（）
+	while（1）//需要手动关闭窗口
+	while (1);
+	getchar();
+	Sleep(2000);
+	return 0;
+} 
