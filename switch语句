@@ -1,0 +1,115 @@
+
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	//判断一个数是不是奇数
+	/*int a;
+	scanf("%d", &a);
+	if (a % 2 == 1)  // a % 2 == 1
+	{
+		printf("a是一个奇数;\n");
+	}
+	switch (a % 2)  //0 偶数 1奇数
+	{
+	case 0:
+		printf("a是一个偶数！\n");
+		break;
+	case 1:
+		printf("a是一个奇数\n");
+	}*/
+
+	//判断一个有没有挂科
+	/*float math;
+	scanf("%f", &math);
+	if (math < 60)  // 
+	{
+		printf("补考费准备好没有了\n");
+	}
+	else
+	{
+		printf("恭喜! 你没挂科\n");
+	}
+	switch (math < 60)  // 1 0
+	{
+	case 0:
+		printf("恭喜! 你没挂科\n");
+		break;
+	case 1:
+		printf("补考费准备好没有了\n");
+		break;
+     }*/
+	
+  
+/*嵌套；
+switch     多路开关； case1 case2 case3 语句break；
+/*嵌套；
+switch
+switch (表达式)
+{
+	case 表达式
+		语句1；
+		break；
+	case
+		语句2；
+		break;
+		.....
+		++++
+	    .....
+
+      
+   ——————————————————————————————————————————————————————————————————————————————————————————
+   
+   #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+	int cholse;
+	while (1)
+	{
+		system("cls");
+		printf("#############################\n");
+		printf("|       学生成绩管理        |\n");
+		printf("#############################\n");
+		printf("|        录入信息           |\n");
+		printf("|        查找信息           |\n");
+		printf("|        删除信息           |\n");
+		printf("|________修改信息___________|\n");
+
+
+		scanf("%d", &cholse);
+
+		switch (cholse)
+		{
+		case 1:
+			printf("录入信息\n");
+			break;
+		case 2:
+			printf("查找信息\n");
+			break;
+		case 3:
+			printf("删除信息\n");
+			break;
+		case 4:
+			printf("修改信息\n");
+			break;
+
+		default:
+			printf("请重新输入\n");
+			break;
+		}
+
+		getchar();
+		return 0;
+	}
+
+	
+}
+————————————————————————————————————————————————————————————————————————————————————
+  
+  
