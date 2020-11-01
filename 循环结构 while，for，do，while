@@ -1,0 +1,129 @@
+
+1while
+while（表达式）
+ {
+	 语句:
+ }
+   执行：每一次循环，判断表达式的的真假，为真继续循环，为假跳出循环。
+	 执行：先判断表达的逻辑值 执行语句。
+2do while
+  执行：先执行一次语句，然后再判断表示式的值，为真继续循环，为假跳出循环。
+do
+{
+	语句:
+}
+3for
+
+4for 循环省略表达式
+5goto break cantinue
+循环嵌套
+
+{
+	int a = 5;
+	 while (a) // 死循环
+	 {
+		 printf("hello world!\n");
+		 a--;
+	 }
+
+	 printf("结束!\n");
+}
+int main()
+{
+	//1+2+3+4+5+6+7+8+9+。。。+到500=？
+	int num = 1;
+	int sum = 0;
+	while (num <= 500)
+	{
+		sum = sum + num;
+		num++;
+	}
+	printf("sum=%d\n", sum);
+	return 0;
+}
+
+//执行：先执行表示1，1 真只执行一次
+//2然后判断表达式2的逻辑值位置，为真循环语句（执行表达式3），为假跳出循环
+#define  _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main()
+{
+	//1+2+3+4+5+6+7+8+9+。。。+到500=？
+	int sum = 0;
+	for (int i = 1; i <= 500; i++)
+	{
+		sum = sum + i;
+	}
+	printf("sum=%d\n", sum);
+}
+
+int main()
+{
+	//n!(n的阶乘) %! 1*2*3*4*5  10! 1*2*3。。。*到10
+	int n;  //
+	double result = 1;
+	scanf("%d", &n);   //结果
+	int a = 1;
+	for (int i = 1; i <= n; i++)  //123456789............
+	{
+		result *= i;
+	}
+	printf("%.2lf\n", result);
+}
+
+#include <stdio.h>
+int main()
+{
+	//啊姆斯特朗数。
+   //水仙花数：3位
+   //一个三位数 百位 十位 个位 的3次方的和 =本身
+   //100-1000几个
+	int h, t, i;
+	for (int n = 100; n < 1000; n++)
+	{
+		h = n / 100;
+		t = n / 10 % 10;
+		i = n % 10;
+		if (h * h * h + t * t * t + i * i * i == n)
+		{
+			printf("n=%d  ", n);
+		}
+	}
+}
+
+//循环嵌套
+for ()
+{
+	while ()
+	{
+
+	}
+}
+for ()
+{
+	for ()
+	{
+
+	}
+}
+while ()
+{
+	for ()
+	{
+
+	}
+}
+do
+{
+	while ()
+	{
+
+	}
+} while ();
+for()
+while()
+  在未知循环次数，但是退出的条件，while（）
+  已知循环次数，for（）
+ for循环省略表达式
+三个表达式都可以省略，根据三个表达式不同的作用，不同的效果。
+
