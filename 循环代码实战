@@ -1,0 +1,176 @@
+#define  _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <windows.h>
+//int main()
+//{
+//	/*   6*6
+//	 * * * * * *
+//	 * * * * * *
+//	 * * * * * *
+//	 * * * * * *
+//	 * * * * * *
+//	 * * * * * *
+//	 */
+//	//36个*号
+int main()
+{
+	for (int i = 0; i < 6; i++)   //6
+	{
+		for (int j = 0; j < 6; j++) //6
+		{
+			printf("*");
+
+		}
+		Sleep(1000);
+		printf("\n");
+	}
+	printf("\n\n");
+
+
+
+	for (int i = 0; i < 6; i++)  //1 2 3 4 5 
+	{
+		for (int j = 8; j > 2 + i; j--)
+			printf("*");
+	}
+	printf("\n");
+
+
+	for (int i = 0; i < 6; i++)
+	{
+
+		/*+
+			++
+			++ +
+			++++
+			++++ +*/
+		for (int j = 0; j < i; j++)
+		{
+			printf("+");
+		}
+		printf("\n");
+	}
+	for (int i = 0; i < 6; i++)
+		/*
+		 **
+		 ***
+		 ****
+		 *****
+		 ******/
+	{
+		for (int j = 0; j < 1 + i; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n\n");
+
+	for (int i = 0; i < 6; i++)
+	{
+		/*
+		 **
+		 ***
+		 ****
+		 *****
+		 ******/
+
+		for (int j = 0; j < 5 - i; j++)
+		{
+			printf(" ");
+		}
+		for (int j = 0; j < 1 + i; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+
+
+	}
+	printf("\n\n");
+
+	for (int i = 0; i < 6; i++)
+	{
+
+		for (int j = 0; j < i + 1; j++)
+		{
+			printf(" ");
+		}
+		for (int j = 0; j < 6 - i; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n\n");
+
+	for (int i = 0; i < 6; i++)
+	{
+		/******
+		 *****
+		 ****
+		 ***
+		 **
+		 */
+
+		for (int j = 0; j < i + 1; j++)
+		{
+			printf(" ");
+		}
+		for (int j = 0; j < 6 - i; j++)
+		{
+			printf("* ");
+		}
+		printf("\n");
+	}
+	printf("\n\n");
+
+
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < i + 2; j++)
+		{
+			printf(" ");
+		}
+		for (int j = 0; j < 5 - i; j++)
+		{
+			printf("* ");
+		}
+		printf("\n");
+	}
+
+	for (int i = 0; i < 11; i++)
+	{ 
+		if (i < 6)  //i 0 1 2 3 4 5 
+		{
+			for (int j = 0; j < 6 - i; j++)
+			{
+				printf(" ");
+			}
+			for (int j = 0; j < 4 - i; j++)
+			{
+				printf("*");
+			}
+		}
+		else
+		{
+			for (int j = 0; j < i - 4; j++)
+			{
+
+			}
+			for (int j = 0; j < 11 - i ; j++)
+			{
+				printf("*");
+			}
+		}
+		printf("\n");
+
+	}
+
+
+}
+
+
+
+
+
