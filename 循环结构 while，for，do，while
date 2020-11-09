@@ -161,3 +161,33 @@ for ()
 	}
 }
 }
+
+
+
+
+//在未知循环次数，但是退出的条件，while（）
+//已知循环次数，for（）
+#define _CRT_SECURE_NO_EARNINGS
+#include <stdio.h>
+int main()
+{
+	int n;
+	double result;
+	scanf("%d", &n);
+	int i;
+	for (i = i, result = 1; i <= n; result *= i, i++);
+
+	i = 1;
+	result = 1;
+	while (i <= n)
+	{
+		result *= i;
+		i++;
+	}
+
+
+	return 0;
+
+		
+
+}
