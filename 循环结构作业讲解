@@ -1,0 +1,158 @@
+
+//外面这个循环包含内循环。
+#define _CRT_SECURE_NO_EARNINGS
+#include <stdio.h>
+
+   /*
+   ***
+  *****
+ *******
+*********/
+int main()
+{
+	for (int i = 0; i < 9; i++)
+	{
+		if (i < 5)
+		{
+			//空格
+			for (int j = 0; j < 4 - i; j++)
+			{
+				printf(" ");
+			}
+			for (int j = 0; j < 2 * i + 1; j++)
+				printf("*");
+		}
+		else
+		{
+
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+
+
+
+int main()
+{
+	for (int i = 0; i < 9; i++)
+	{
+		if (i < 5)
+		{
+			//空格
+			for (int j = 0; j < 4 - i; j++)
+			{
+				printf(" ");
+			}
+			for (int j = 0; j < 2 * i + 1; j++)
+				printf("*");
+		}
+		else
+		{
+			for (int j = 0; j < i - 4; j++)
+			{
+				printf(" ");
+			}
+			for (int j = 0; j < 17 - 2 * i; j++)
+			{
+				printf("*");          
+				
+			}    /*
+				   ***
+				  *****
+				 *******
+				*********
+				 *******
+          *****
+           ***
+            */
+
+				
+		}
+		printf("\n");   
+	}
+
+	return 0;
+}
+
+
+/*最小公倍数；
+a能被b整除，a就是b的倍数。
+两个数 公有的倍数角做他们的公倍数，
+其中除2以外最小的一个公倍数就叫做这几个整数的最小公倍数
+比如2 的倍数有： 0 2 4 6 8 10 12
+ 4的倍数有： 0 4  8  12 16 。。
+ 2和4 的公倍数就有 0 4 8 12 16
+	最小公倍数就是：4
+	设计程序，从键盘输入2个数，求出他们的最小公倍数。*/
+  
+  #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main()
+{
+
+
+	int x, y;
+	printf("请输入x和y的值:");
+	scanf("%d%d", &x, &y);
+
+	//大的数保存在y 小的数保存在x
+	if (x > y)
+	{
+		int temp;     //temp临时变量
+		temp = x;
+		x = y;
+		y = temp;
+	}
+	for (int i = y;; i++)
+	{
+		if (i % y == 0 && i % x == 0)
+		{
+			printf("最小公倍数为:%d\n", i);
+			break;
+		}
+	}
+
+	getchar();
+	return 0;
+}
+  
+  
+  
+
+/*勾股数。
+能够构成直角三角形的三个边长满足：a* a + b *= c * c;
+我们把a，b，c，叫做一组勾股数
+请设计程序，求出100以内的所有勾股数，并打印！*/
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+
+	//三个边长
+	int a, b, c;
+
+	for (a = 1; a <=100; a++)
+	{
+		for (b = a + 1; b <= 100; b++)
+		{
+			c = (int)sqrt(double(a * a + b * b));
+			//三角形
+			if (a + b > c && a + b > a);
+			{
+				if (a * a + b * b == c * c && c <= 100)
+				{
+					printf("%d%d%d\n", a, b, c);
+				}
+			}
+		}
+	}
+
+
+	getchar();
+	return 0;
+}
+
+
