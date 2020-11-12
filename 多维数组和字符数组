@@ -1,0 +1,73 @@
+
+
+int main()
+{
+	int a[6] = { 1,2,3,4,5 };
+	for (int i = 0; i < 6; i++)
+	{
+		printf("%d\t", a[i]);
+	}
+	char name[10] = { 'j','i','u','x','i','a' };
+
+	printf("%s\n", name);
+	
+	getchar();
+	return 0;
+}
+
+打印结果1       2       3       4       5       0       jiuxia
+////////////////////////////////////////////////////////////////////
+
+
+ 字符数组，装字符；
+  字符型数组
+  1.定义 26个英文字母。
+   char name[10]//10个字符
+  2.初始化和赋值；
+  初始化
+  1.一个字符去初始化
+  char name[10] = { 'j','i','u','x','i','a' };
+  2.字符串常量去初始化
+    char name[10]="jiuxia";
+
+	引用
+	name[3];
+	打印 %c name[1]
+	     %s name
+	字符串的结果标志'\0'
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h> //字符串头文件
+#include <math.h>
+int main()
+{
+	int a[6] = { 1,2,3,4,5 };
+	for (int i = 0; i < 6; i++)
+	{
+		printf("%d\t", a[i]);
+	}
+	printf("\n");
+	//char name[10] = { 'j','i','u','x','i','a' };
+	
+	char name[10] = { 'j','i','u','\0','x','i','a' };
+
+	printf("%s", name);
+
+
+	
+	getchar();
+	return 0;
+}
+
+
+
+	char name[10];
+
+	strcpy(name, "jiuxia");
+
+	printf("%s", name);   //字符串拷贝
+
+
